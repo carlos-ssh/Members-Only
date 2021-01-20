@@ -52,3 +52,8 @@ test:
   username: krl
   password:
   timeout: 5000
+
+
+production:
+  <<: *default
+  database: <%= ENV['DATABASE_URL'] %>
