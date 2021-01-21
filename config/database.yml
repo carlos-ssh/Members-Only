@@ -1,4 +1,3 @@
-
 default: &default
   adapter: postgresql
   host: <%= ENV["DATABASE_HOST"] %>
@@ -9,16 +8,13 @@ default: &default
   pool: 2
   timeout: 5000
 
-
 development:
   <<: *default
   database: tweeets_development
 
-
 test:
   <<: *default
   database: tweeets_test
-
 
 production:
   <<: *default
